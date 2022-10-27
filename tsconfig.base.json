@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@wolt/react-intl": ["libs/react-intl/src/index.ts"]
+      "@wolt/react-intl": ["libs/react-intl/src/index.ts"],
+      "@wolt/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
