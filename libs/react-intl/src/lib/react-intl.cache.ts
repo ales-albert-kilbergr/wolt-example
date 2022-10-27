@@ -29,6 +29,10 @@ export class ReactIntlLocaleStorage implements IReactIntlLocaleCache {
     private cacheKey: string = 'ReactIntlLocaleCache'
   ) {}
 
+  public getDriver() {
+    return this.storage;
+  }
+
   public get() {
     const storedLocale = this.storage.getItem(this.cacheKey);
     return Promise.resolve(

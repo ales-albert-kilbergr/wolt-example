@@ -1,4 +1,5 @@
 import { ResolvedIntlConfig } from 'react-intl';
+import { ReactIntlProviderError } from './react-intl.error';
 import { ReactIntlLocale } from './react-intl.locales';
 
 /**
@@ -7,6 +8,7 @@ import { ReactIntlLocale } from './react-intl.locales';
 export enum ReactIntlStateAction {
   SET_INTL_MESSAGE = 'SET_INTL_MESSAGE',
   SET_CURRENT_LOCALE = 'SET_CURRENT_LOCALE',
+  SET_ERROR = 'SET_ERROR',
 }
 
 export interface ISetCurrentLocaleAction {
@@ -19,9 +21,14 @@ export interface ISetIntlMessageAction {
   payload: ResolvedIntlConfig['messages'] | null;
 }
 
+export interface ISetIntlErrorAction {
+  type: ReactIntlStateAction.SET_ERROR;
+  error: ReactIntlProviderError;
+}
+
 export type IReactIntlReducer = React.Reducer<
   IReactIntlState,
-  ISetIntlMessageAction | ISetCurrentLocaleAction
+  ISetIntlMessageAction | ISetCurrentLocaleAction | ISetIntlErrorAction
 >;
 
 /**
@@ -36,6 +43,8 @@ export interface IReactIntlState {
    * The `currentLocale` is currently used locale.
    */
   currentLocale?: ReactIntlLocale;
+
+  error?: ReactIntlProviderError;
 }
 
 /**
@@ -47,6 +56,8 @@ export const reactIntlReducer: IReactIntlReducer = (state, action) => {
       return { ...state, currentLocale: action.payload };
     case ReactIntlStateAction.SET_INTL_MESSAGE:
       return { ...state, intlMessages: action.payload };
+    case ReactIntlStateAction.SET_ERROR:
+      return { ...state, error: action.error };
     default:
       return state;
   }

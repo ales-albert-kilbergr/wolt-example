@@ -19,6 +19,7 @@
 
 - [React INTL](#react-intl)
   - [Usage](#usage)
+  - [Testing](#testing)
   - [React Intl Controller](#react-intl-controller)
     - [Properties](#properties)
     - [Methods](#methods)
@@ -50,6 +51,10 @@ export const MyComponent = () => {
   );
 };
 ```
+
+## Testing
+
+Run `yarn nx test react-intl`
 
 ## React Intl Controller
 

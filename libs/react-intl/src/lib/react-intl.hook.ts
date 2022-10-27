@@ -93,22 +93,33 @@ export const useReactIntlControllerProvider: IReactIntlControllerHook = (
     if (cache) {
       cache
         .get()
-        .then((locale) => setLocale(locale || normalizedProps.defaultLocale))
-        .catch((error) =>
-          ReactIntlProviderError.FetchFromCacheFailed(cache, error)
-        );
+        .then(
+          (locale) => setLocale(locale || normalizedProps.defaultLocale),
+          (error) => {
+            dispatch({
+              type: ReactIntlStateAction.SET_ERROR,
+              error: ReactIntlProviderError.FetchFromCacheFailed(cache, error),
+            });
+          }
+        )
+        .catch((error) => {
+          dispatch({
+            type: ReactIntlStateAction.SET_ERROR,
+            error: ReactIntlProviderError.FetchFromCacheFailed(cache, error),
+          });
+        });
     } else {
       setLocale(normalizedProps.defaultLocale);
     }
     // We want to run this effect on application init or only if for some
     // unseen reason the `defaultLocale` would change.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [normalizedProps.defaultLocale, cache]);
+  }, [normalizedProps.defaultLocale, cache, dispatch]);
   // Exposes a callback to handle mouse event meant to change current locale.
   const handleSetLocaleClick = React.useCallback(
-    (event: React.MouseEvent<HTMLElement>) => {
+    async (event: React.MouseEvent<HTMLElement>) => {
       const locale = getLocaleFromClickEvent(event);
-      setLocale(locale);
+      await setLocale(locale);
     },
     [setLocale]
   );
@@ -121,13 +132,15 @@ export const useReactIntlControllerProvider: IReactIntlControllerHook = (
       enabledLocales: enabledLocaleToArray(),
       currentLocale: state.currentLocale,
       handleSetLocaleClick,
+      error: state.error,
     }),
     [
-      setLocale,
-      state.intlMessages,
       state.currentLocale,
+      state.intlMessages,
       normalizedProps.defaultLocale,
+      setLocale,
       handleSetLocaleClick,
+      state.error,
     ]
   );
 };

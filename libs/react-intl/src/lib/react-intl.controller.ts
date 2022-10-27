@@ -1,4 +1,5 @@
 import { ResolvedIntlConfig } from 'react-intl';
+import { ReactIntlProviderError } from './react-intl.error';
 import { ReactIntlLocale } from './react-intl.locales';
 
 /**
@@ -23,6 +24,8 @@ export interface IReactIntlController {
    * The `currentLocale` is the currently applied locale
    */
   currentLocale?: ReactIntlLocale;
+
+  error?: ReactIntlProviderError;
   /**
    * The `setLocale` allows to change a current locale in application, which
    * will result into rerender of all Formatted components and will load
