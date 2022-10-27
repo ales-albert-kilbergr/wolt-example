@@ -1,19 +1,19 @@
 {
-  "name": "oha-e2e",
+  "name": "oha-browser-app-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/oha-e2e/src",
+  "sourceRoot": "apps/oha-browser-app-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/oha-e2e/cypress.config.ts",
-        "devServerTarget": "oha:serve:development",
+        "cypressConfig": "apps/oha-browser-app-e2e/cypress.config.ts",
+        "devServerTarget": "oha-browser-app:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "oha:serve:production"
+          "devServerTarget": "oha-browser-app:serve:production"
         }
       }
     },
@@ -21,10 +21,10 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/oha-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/oha-browser-app-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["oha"]
+  "implicitDependencies": ["oha-browser-app"]
 }
