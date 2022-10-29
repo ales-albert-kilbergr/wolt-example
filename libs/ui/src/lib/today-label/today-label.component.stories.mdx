@@ -1,0 +1,20 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { WoltUiProvider } from '../ui.provider';
+import { TodayLabel } from './today-label.component';
+import { IntlProvider } from 'react-intl';
+
+<Meta title="ui/TodayLabel" component={TodayLabel} />
+
+# TodayLabel
+
+TodayLabel
+
+<Canvas>
+  <Story name="Basic">
+    <WoltUiProvider>
+      <IntlProvider messages={{}} locale="en-US">
+        <TodayLabel />
+      </IntlProvider>
+    </WoltUiProvider>
+  </Story>
+</Canvas>

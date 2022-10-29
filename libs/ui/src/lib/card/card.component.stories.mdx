@@ -1,0 +1,86 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { WoltCard } from './card.component';
+import { WoltUiProvider } from '../ui.provider';
+import Box from '@mui/material/Box';
+import { CardItem } from '../card-item/card-item.component';
+import { WeekdayInfo } from '../weekday-info/weekday-info.component';
+import { CardHeader } from '../card-header/card-header.component';
+import { IntlProvider } from 'react-intl';
+
+<Meta title="ui/WoltCard" component={WoltCard} />
+
+# WoltCard
+
+Card
+
+<Canvas>
+  <Story name="Basic">
+    <WoltUiProvider>
+      <IntlProvider messages={{}} locale="en-US">
+        <WoltCard>
+          <CardHeader>Opening hours</CardHeader>
+          <CardItem>
+            <WeekdayInfo
+              dayOfWeek={0}
+              isToday={new Date().getDay() === 0}
+            ></WeekdayInfo>
+          </CardItem>
+          <CardItem>
+            <WeekdayInfo dayOfWeek={1}></WeekdayInfo>
+          </CardItem>
+          <CardItem>
+            <WeekdayInfo
+              dayOfWeek={2}
+              data={[
+                {
+                  openAtSeconds: 32400,
+                  closeAtSeconds: 72000,
+                },
+              ]}
+            ></WeekdayInfo>
+          </CardItem>
+          <CardItem>
+            <WeekdayInfo
+              dayOfWeek={3}
+              data={[
+                {
+                  openAtSeconds: 32400,
+                  closeAtSeconds: 72000,
+                },
+                {
+                  openAtSeconds: 57600,
+                  closeAtSeconds: 82800,
+                },
+              ]}
+            ></WeekdayInfo>
+          </CardItem>
+          <CardItem>
+            <WeekdayInfo
+              dayOfWeek={4}
+              data={[
+                {
+                  openAtSeconds: 32400,
+                  closeAtSeconds: 72000,
+                },
+              ]}
+            ></WeekdayInfo>
+          </CardItem>
+          <CardItem>
+            <WeekdayInfo
+              dayOfWeek={5}
+              data={[
+                {
+                  openAtSeconds: 32400,
+                  closeAtSeconds: 72000,
+                },
+              ]}
+            ></WeekdayInfo>
+          </CardItem>
+          <CardItem>
+            <WeekdayInfo dayOfWeek={6} data={[]}></WeekdayInfo>
+          </CardItem>
+        </WoltCard>
+      </IntlProvider>
+    </WoltUiProvider>
+  </Story>
+</Canvas>

@@ -1,0 +1,26 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { CardHeader } from './card-header.component';
+import { WoltUiProvider } from '../ui.provider';
+import Box from '@mui/material/Box';
+import { WoltCard } from '../card/card.component';
+import { CardItem } from '../card-item/card-item.component';
+
+<Meta title="ui/CardHeader" component={CardHeader} />
+
+# CardHeader
+
+Card header
+
+<Canvas>
+  <Story name="Basic">
+    <WoltUiProvider>
+      <WoltCard>
+        <CardHeader>Opening hours</CardHeader>
+        <CardItem>Item #1</CardItem>
+        <CardItem>Item #2</CardItem>
+        <CardItem>Item #3</CardItem>
+        <CardItem>Item #4</CardItem>
+      </WoltCard>
+    </WoltUiProvider>
+  </Story>
+</Canvas>

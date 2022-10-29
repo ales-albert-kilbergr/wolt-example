@@ -1,0 +1,70 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { WoltCard } from '../card/card.component';
+import { WoltUiProvider } from '../ui.provider';
+import Box from '@mui/material/Box';
+import { CardItem } from '../card-item/card-item.component';
+import { WeekdayInfo } from './weekday-info.component';
+import { IntlProvider } from 'react-intl';
+
+<Meta title="ui/WeekdayInfo" component={WoltCard} />
+
+# WeekdayInfo
+
+WeekdayInfo
+
+<Canvas>
+  <Story name="Basic">
+    <WoltUiProvider>
+      <IntlProvider messages={{}} locale="en-US">
+        <WeekdayInfo dayOfWeek={2} />
+      </IntlProvider>
+    </WoltUiProvider>
+  </Story>
+  <Story name="Today">
+    <WoltUiProvider>
+      <IntlProvider messages={{}} locale="en-US">
+        <WeekdayInfo dayOfWeek={2} isToday={true} />
+      </IntlProvider>
+    </WoltUiProvider>
+  </Story>
+  <Story name="With basic time">
+    <WoltUiProvider>
+      <IntlProvider messages={{}} locale="en-US">
+        <WeekdayInfo
+          dayOfWeek={2}
+          isToday={true}
+          data={[
+            {
+              openAtSeconds: 32400,
+              closeAtSeconds: 72000,
+            },
+          ]}
+        />
+      </IntlProvider>
+    </WoltUiProvider>
+  </Story>
+  <Story name="With multiple timeslots">
+    <WoltUiProvider>
+      <IntlProvider messages={{}} locale="en-US">
+        <WeekdayInfo
+          dayOfWeek={2}
+          isToday={true}
+          data={[
+            {
+              openAtSeconds: 32400,
+              closeAtSeconds: 39600,
+            },
+            {
+              openAtSeconds: 57600,
+              closeAtSeconds: 82800,
+            },
+            {
+              openAtSeconds: 57600,
+              closeAtSeconds: 82800,
+            },
+          ]}
+        />
+      </IntlProvider>
+    </WoltUiProvider>
+  </Story>
+</Canvas>

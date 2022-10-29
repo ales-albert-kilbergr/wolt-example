@@ -1,0 +1,29 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { WoltCard } from '../card/card.component';
+import { WoltUiProvider } from '../ui.provider';
+import Box from '@mui/material/Box';
+import { TimeLabel } from './time-label.component';
+import { IntlProvider } from 'react-intl';
+
+<Meta title="ui/TimeLabel" component={WoltCard} />
+
+# Time label
+
+Time label
+
+<Canvas>
+  <Story name="Morning">
+    <WoltUiProvider>
+      <IntlProvider messages={{}} locale="en-US">
+        <TimeLabel seconds={32400} />
+      </IntlProvider>
+    </WoltUiProvider>
+  </Story>
+  <Story name="Afternoon">
+    <WoltUiProvider>
+      <IntlProvider messages={{}} locale="en-US">
+        <TimeLabel seconds={72000} />
+      </IntlProvider>
+    </WoltUiProvider>
+  </Story>
+</Canvas>

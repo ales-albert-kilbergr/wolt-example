@@ -1,0 +1,20 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { WoltUiProvider } from '../ui.provider';
+import { ClosedLabel } from './closed-label.component';
+import { IntlProvider } from 'react-intl';
+
+<Meta title="ui/ClosedLabel" component={ClosedLabel} />
+
+# ClosedLabel
+
+ClosedLabel
+
+<Canvas>
+  <Story name="Basic">
+    <WoltUiProvider>
+      <IntlProvider messages={{}} locale="en-US">
+        <ClosedLabel />
+      </IntlProvider>
+    </WoltUiProvider>
+  </Story>
+</Canvas>

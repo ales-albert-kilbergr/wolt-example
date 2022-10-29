@@ -1,0 +1,27 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { WoltUiProvider } from '../ui.provider';
+import { WeekdayLabel } from './weekday-label.component';
+import { IntlProvider } from 'react-intl';
+
+<Meta title="ui/WeekdayLabel" component={WeekdayLabel} />
+
+# WeekdayLabel
+
+WeekdayLabel
+
+<Canvas>
+  <Story name="Monday">
+    <WoltUiProvider>
+      <IntlProvider messages={{}} locale="en-US">
+        <WeekdayLabel day={0} />
+      </IntlProvider>
+    </WoltUiProvider>
+  </Story>
+  <Story name="Tuesday">
+    <WoltUiProvider>
+      <IntlProvider messages={{}} locale="de-DE">
+        <WeekdayLabel day={1} />
+      </IntlProvider>
+    </WoltUiProvider>
+  </Story>
+</Canvas>

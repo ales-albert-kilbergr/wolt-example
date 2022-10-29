@@ -1,0 +1,22 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { WoltCard } from '../card/card.component';
+import { WoltUiProvider } from '../ui.provider';
+import Box from '@mui/material/Box';
+import { OpeningHoursRange } from './opening-hours-range.component';
+import { IntlProvider } from 'react-intl';
+
+<Meta title="ui/OpeningHoursRange" component={WoltCard} />
+
+# Opening Hours Range
+
+Opening Hours Range
+
+<Canvas>
+  <Story name="Base">
+    <WoltUiProvider>
+      <IntlProvider messages={{}} locale="en-US">
+        <OpeningHoursRange startAtSeconds={32400} endAtSeconds={72000} />
+      </IntlProvider>
+    </WoltUiProvider>
+  </Story>
+</Canvas>
