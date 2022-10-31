@@ -1,38 +1,126 @@
 {
+  "5dOoLU": [
+    {
+      "type": 0,
+      "value": "Datei wählen:"
+    }
+  ],
+  "CvwdGR": [
+    {
+      "type": 0,
+      "value": "Unbekannter Analysefehler!"
+    }
+  ],
   "Hr/4a1": [
     {
       "type": 0,
-      "value": "Today"
+      "value": "Heute"
     }
   ],
   "IgvG/M": [
     {
       "type": 0,
-      "value": "German"
+      "value": "Deutsch"
     }
   ],
   "KHJCun": [
     {
       "type": 0,
-      "value": "English (US)"
+      "value": "Englisch (US)"
+    }
+  ],
+  "SL5smp": [
+    {
+      "type": 0,
+      "value": "Der erste Eintrag nach einem geschlossenen Tag kann nicht vom Typ \"geschlossen\" sein. ("
+    },
+    {
+      "type": 1,
+      "value": "weekday"
+    },
+    {
+      "type": 0,
+      "value": ")"
     }
   ],
   "WrSFZP": [
     {
       "type": 0,
-      "value": "French"
+      "value": "Französisch"
+    }
+  ],
+  "XAavlC": [
+    {
+      "type": 0,
+      "value": "Quellenwahl:"
     }
   ],
   "ZzRWmv": [
     {
       "type": 0,
-      "value": "Select a language"
+      "value": "Wähle eine Sprache"
+    }
+  ],
+  "g5qKeG": [
+    {
+      "type": 0,
+      "value": "Ungültiger erster Eintrag. Daten dürfen nicht mit dem Typ \"geschlossen\" beginnen. ("
+    },
+    {
+      "type": 1,
+      "value": "weekday"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "lwgvqO": [
+    {
+      "type": 0,
+      "value": "Der letzte Eintrag vor einem geschlossenen Tag darf nicht vom Typ \"offen\" sein!. ("
+    },
+    {
+      "type": 1,
+      "value": "weekday"
+    },
+    {
+      "type": 0,
+      "value": ")"
     }
   ],
   "pf9Aoj": [
     {
       "type": 0,
-      "value": "Closed"
+      "value": "Abgeschlossen"
+    }
+  ],
+  "wL6vMM": [
+    {
+      "type": 0,
+      "value": "Zwei folgende Datensätze des gleichen Typs \""
+    },
+    {
+      "type": 1,
+      "value": "type"
+    },
+    {
+      "type": 0,
+      "value": "\" gefunden! \"("
+    },
+    {
+      "type": 1,
+      "value": "weekday"
+    },
+    {
+      "type": 0,
+      "value": ")\""
+    }
+  ],
+  "xZjm5n": [
+    {
+      "type": 0,
+      "value": "Öffnungszeiten:"
     }
   ]
 }

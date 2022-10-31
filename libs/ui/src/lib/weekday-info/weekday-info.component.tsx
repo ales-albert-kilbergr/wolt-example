@@ -22,11 +22,7 @@ export const WeekdayInfo: WeekdayInfoComponent = (props) => {
     () => new Date().getDay() - 1 === props.dayOfWeek,
     [props.dayOfWeek]
   );
-  console.log(
-    props.data,
-    props.data?.length,
-    props.data?.length && props.data.length > 0
-  );
+
   return (
     <Box sx={{ display: 'flex', alignItems: 'flex-start', height: '100%' }}>
       <WeekdayLabel day={props.dayOfWeek} />
@@ -36,9 +32,8 @@ export const WeekdayInfo: WeekdayInfoComponent = (props) => {
         {props.data &&
           props.data.length > 0 &&
           props.data?.map((record, ix) => (
-            <Box sx={{ textAlign: 'right', lineHeight: '38px' }}>
+            <Box sx={{ textAlign: 'right', lineHeight: '38px' }} key={ix}>
               <OpeningHoursRange
-                key={ix}
                 startAtSeconds={record.openAtSeconds}
                 endAtSeconds={record.closeAtSeconds}
               />

@@ -29,7 +29,7 @@ export const ReactIntlControllerProvider: ReactIntlControllerProviderComponent =
     if (!controller.intlMessages) {
       return null;
     }
-    console.log(controller);
+
     return (
       <IntlProvider
         messages={controller.intlMessages}

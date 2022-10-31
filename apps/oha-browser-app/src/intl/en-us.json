@@ -1,4 +1,10 @@
 {
+  "5dOoLU": {
+    "defaultMessage": "Choose file:"
+  },
+  "CvwdGR": {
+    "defaultMessage": "Unknown parse error!"
+  },
   "Hr/4a1": {
     "defaultMessage": "Today",
     "description": "Today label"
@@ -11,16 +17,34 @@
     "defaultMessage": "English (US)",
     "description": "English language title"
   },
+  "SL5smp": {
+    "defaultMessage": "First entry after a closed day cannot by of type \"close\"!. ({weekday})"
+  },
   "WrSFZP": {
     "defaultMessage": "French",
     "description": "French language title"
+  },
+  "XAavlC": {
+    "defaultMessage": "Source choice:"
   },
   "ZzRWmv": {
     "defaultMessage": "Select a language",
     "description": "Select language helper tooltip"
   },
+  "g5qKeG": {
+    "defaultMessage": "Invalid first entry. Data cannot start with type \"closed\". ({weekday})"
+  },
+  "lwgvqO": {
+    "defaultMessage": "Last entry before a closed day cannot by of type \"open\"!. ({weekday})"
+  },
   "pf9Aoj": {
     "defaultMessage": "Closed",
     "description": "Closed label"
+  },
+  "wL6vMM": {
+    "defaultMessage": "Two following records of the same type \"{type}\" found! \"({weekday})\""
+  },
+  "xZjm5n": {
+    "defaultMessage": "Opening hours:"
   }
 }

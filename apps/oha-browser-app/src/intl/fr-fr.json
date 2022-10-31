@@ -1,26 +1,50 @@
 {
+  "5dOoLU": {
+    "defaultMessage": "Choisisez le fichier:"
+  },
+  "CvwdGR": {
+    "defaultMessage": "Erreur d'analyse inconnue !"
+  },
   "Hr/4a1": {
-    "defaultMessage": "Today",
+    "defaultMessage": "Aujourd'hui",
     "description": "Today label"
   },
   "IgvG/M": {
-    "defaultMessage": "German",
+    "defaultMessage": "Allemand",
     "description": "German language title"
   },
   "KHJCun": {
-    "defaultMessage": "English (US)",
+    "defaultMessage": "Anglais (US)",
     "description": "English language title"
   },
+  "SL5smp": {
+    "defaultMessage": "La première entrée après un jour de fermeture ne peut pas être de type \"fermer\" !. ({weekday})"
+  },
   "WrSFZP": {
-    "defaultMessage": "French",
+    "defaultMessage": "Français",
     "description": "French language title"
   },
+  "XAavlC": {
+    "defaultMessage": "Choix des sources :"
+  },
   "ZzRWmv": {
-    "defaultMessage": "Select a language",
+    "defaultMessage": "Sélectionnez une langue",
     "description": "Select language helper tooltip"
   },
+  "g5qKeG": {
+    "defaultMessage": "Première entrée invalide. Les données ne peuvent pas commencer par le type \"fermé\". ({weekday})"
+  },
+  "lwgvqO": {
+    "defaultMessage": "La dernière entrée avant un jour de fermeture ne peut pas être de type \"ouvert\" !. ({weekday})"
+  },
   "pf9Aoj": {
-    "defaultMessage": "Closed",
+    "defaultMessage": "Fermé",
     "description": "Closed label"
+  },
+  "wL6vMM": {
+    "defaultMessage": "Deux enregistrements suivants du même type \"{type}\" trouvés ! \"({weekday})\""
+  },
+  "xZjm5n": {
+    "defaultMessage": "Horaires d'ouvertures:"
   }
 }

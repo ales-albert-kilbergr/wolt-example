@@ -1,15 +1,23 @@
 import * as React from 'react';
-import { FileOption, WeekdayInfo } from '@wolt/ui';
+import {
+  FileOption,
+  SecondaryLink,
+  SecondaryLinkGroup,
+  WeekdayInfo,
+} from '@wolt/ui';
 import { ReactIntlLocale, useReactIntlController } from '@wolt/react-intl';
 import Box from '@mui/material/Box';
 import { WoltCard, CardHeader, CardItem } from '@wolt/ui';
 import {
+  OpeningHoursParseErrorMessage,
   useLoadOpeningHoursSourceData,
   useOpeningHoursSourceIndex,
   useOpeningHoursSourceParser,
   useOpeningHoursSourceValidator,
 } from '@wolt/opening-hours-client';
 import Typography from '@mui/material/Typography';
+import { FormattedMessage } from 'react-intl';
+import { OPENING_HOURS_APP_MESSAGES } from './messages';
 
 export interface IOpeningHoursMainViewProps {
   sourceIndexUrl: string;
@@ -42,6 +50,9 @@ export const OpeningHoursMainView: OpeningHoursMainViewComponent = (props) => {
   );
   const intl = useReactIntlController();
 
+  if (!intl) {
+    return null;
+  }
   return (
     <Box
       sx={{
@@ -62,31 +73,54 @@ export const OpeningHoursMainView: OpeningHoursMainViewComponent = (props) => {
           )}
           {!sourceValidator.schema?.error && !sourceParser.data && (
             <>
-              <CardHeader>Source choice:</CardHeader>
-              <CardItem>Choose files:</CardItem>
+              <CardHeader>
+                <FormattedMessage
+                  {...OPENING_HOURS_APP_MESSAGES.sourceChoice}
+                />
+              </CardHeader>
+              <CardItem>
+                <Typography sx={{ lineHeight: '38px' }}>
+                  <FormattedMessage
+                    {...OPENING_HOURS_APP_MESSAGES.chooseFile}
+                  />
+                </Typography>
+              </CardItem>
               {sourceFilesIndex.files?.map((fileName) => (
                 <CardItem key={fileName}>
                   <FileOption
                     filePath={fileName}
                     key={fileName}
                     onSelect={onFileSelect}
+                    isInvalid={
+                      Boolean(sourceParser.error) &&
+                      dataLoader.fileName === fileName
+                    }
                   />
                 </CardItem>
               ))}
             </>
           )}
-          {sourceParser.data && (
+          {dataLoader.data && (
             <>
-              <CardHeader>Opening hours</CardHeader>
-              {sourceParser.data.map((record) => (
-                <CardItem>
+              <CardHeader>
+                <FormattedMessage
+                  {...OPENING_HOURS_APP_MESSAGES.openingHours}
+                />
+              </CardHeader>
+              {dataLoader.data.map((record, ix) => (
+                <CardItem key={ix}>
                   <WeekdayInfo
-                    dayOfWeek={record.weekday}
+                    dayOfWeek={record.weekdayIndex}
                     data={record.entries}
                   ></WeekdayInfo>
                 </CardItem>
               ))}
             </>
+          )}
+          {sourceParser.error && (
+            <Typography color="red" sx={{ padding: '24px' }}>
+              <OpeningHoursParseErrorMessage error={sourceParser.error} />
+            </Typography>
           )}
         </>
       </WoltCard>
@@ -95,42 +129,38 @@ export const OpeningHoursMainView: OpeningHoursMainViewComponent = (props) => {
           display: 'flex',
           justifyContent: 'space-between',
           width: '350px',
-          padding: '0 24px',
+          padding: '6px 24px',
           color: '#A1A2A4',
         }}
       >
-        <Box sx={{ display: 'flex', columnGap: '6px' }}>
-          <Typography
-            sx={{ color: '#A1A2A4', cursor: 'pointer' }}
+        <SecondaryLinkGroup>
+          <SecondaryLink
             data-locale={ReactIntlLocale.EN_US}
-            onClick={intl?.handleSetLocaleClick}
+            onClick={intl.handleSetLocaleClick}
+            active={intl.currentLocale === ReactIntlLocale.EN_US}
           >
             En
-          </Typography>
-          <Typography>|</Typography>
-          <Typography
-            sx={{ color: '#A1A2A4', cursor: 'pointer' }}
+          </SecondaryLink>
+          <SecondaryLink
             data-locale={ReactIntlLocale.DE_DE}
             onClick={intl?.handleSetLocaleClick}
+            active={intl.currentLocale === ReactIntlLocale.DE_DE}
           >
             De
-          </Typography>
-          <Typography>|</Typography>
-          <Typography
-            sx={{ color: '#A1A2A4', cursor: 'pointer' }}
+          </SecondaryLink>
+          <SecondaryLink
             data-locale={ReactIntlLocale.FR_FR}
             onClick={intl?.handleSetLocaleClick}
+            active={intl.currentLocale === ReactIntlLocale.FR_FR}
           >
             FR
-          </Typography>
-        </Box>
+          </SecondaryLink>
+        </SecondaryLinkGroup>
         {sourceParser.data && (
-          <Typography
-            onClick={sourceParser.clear}
-            sx={{ color: '#A1A2A4', cursor: 'pointer' }}
-          >
-            Back
-          </Typography>
+          <SecondaryLink disabled={true}>{dataLoader.fileName}</SecondaryLink>
+        )}
+        {sourceParser.data && (
+          <SecondaryLink onClick={sourceParser.clear}>Back</SecondaryLink>
         )}
       </Box>
     </Box>

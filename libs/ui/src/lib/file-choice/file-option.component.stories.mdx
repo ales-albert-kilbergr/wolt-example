@@ -17,4 +17,11 @@ FileOption
       </IntlProvider>
     </WoltUiProvider>
   </Story>
+  <Story name="Invalid">
+    <WoltUiProvider>
+      <IntlProvider messages={{}} locale="en-US">
+        <FileOption filePath="test-file-one.data.json" isInvalid={true} />
+      </IntlProvider>
+    </WoltUiProvider>
+  </Story>
 </Canvas>

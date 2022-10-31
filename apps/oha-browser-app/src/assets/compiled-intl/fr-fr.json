@@ -1,38 +1,126 @@
 {
+  "5dOoLU": [
+    {
+      "type": 0,
+      "value": "Choisisez le fichier:"
+    }
+  ],
+  "CvwdGR": [
+    {
+      "type": 0,
+      "value": "Erreur d'analyse inconnue !"
+    }
+  ],
   "Hr/4a1": [
     {
       "type": 0,
-      "value": "Today"
+      "value": "Aujourd'hui"
     }
   ],
   "IgvG/M": [
     {
       "type": 0,
-      "value": "German"
+      "value": "Allemand"
     }
   ],
   "KHJCun": [
     {
       "type": 0,
-      "value": "English (US)"
+      "value": "Anglais (US)"
+    }
+  ],
+  "SL5smp": [
+    {
+      "type": 0,
+      "value": "La première entrée après un jour de fermeture ne peut pas être de type \"fermer\" !. ("
+    },
+    {
+      "type": 1,
+      "value": "weekday"
+    },
+    {
+      "type": 0,
+      "value": ")"
     }
   ],
   "WrSFZP": [
     {
       "type": 0,
-      "value": "French"
+      "value": "Français"
+    }
+  ],
+  "XAavlC": [
+    {
+      "type": 0,
+      "value": "Choix des sources :"
     }
   ],
   "ZzRWmv": [
     {
       "type": 0,
-      "value": "Select a language"
+      "value": "Sélectionnez une langue"
+    }
+  ],
+  "g5qKeG": [
+    {
+      "type": 0,
+      "value": "Première entrée invalide. Les données ne peuvent pas commencer par le type \"fermé\". ("
+    },
+    {
+      "type": 1,
+      "value": "weekday"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "lwgvqO": [
+    {
+      "type": 0,
+      "value": "La dernière entrée avant un jour de fermeture ne peut pas être de type \"ouvert\" !. ("
+    },
+    {
+      "type": 1,
+      "value": "weekday"
+    },
+    {
+      "type": 0,
+      "value": ")"
     }
   ],
   "pf9Aoj": [
     {
       "type": 0,
-      "value": "Closed"
+      "value": "Fermé"
+    }
+  ],
+  "wL6vMM": [
+    {
+      "type": 0,
+      "value": "Deux enregistrements suivants du même type \""
+    },
+    {
+      "type": 1,
+      "value": "type"
+    },
+    {
+      "type": 0,
+      "value": "\" trouvés ! \"("
+    },
+    {
+      "type": 1,
+      "value": "weekday"
+    },
+    {
+      "type": 0,
+      "value": ")\""
+    }
+  ],
+  "xZjm5n": [
+    {
+      "type": 0,
+      "value": "Horaires d'ouvertures:"
     }
   ]
 }

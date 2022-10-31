@@ -1,26 +1,50 @@
 {
+  "5dOoLU": {
+    "defaultMessage": "Datei wählen:"
+  },
+  "CvwdGR": {
+    "defaultMessage": "Unbekannter Analysefehler!"
+  },
   "Hr/4a1": {
-    "defaultMessage": "Today",
+    "defaultMessage": "Heute",
     "description": "Today label"
   },
   "IgvG/M": {
-    "defaultMessage": "German",
+    "defaultMessage": "Deutsch",
     "description": "German language title"
   },
   "KHJCun": {
-    "defaultMessage": "English (US)",
+    "defaultMessage": "Englisch (US)",
     "description": "English language title"
   },
+  "SL5smp": {
+    "defaultMessage": "Der erste Eintrag nach einem geschlossenen Tag kann nicht vom Typ \"geschlossen\" sein. ({weekday})"
+  },
   "WrSFZP": {
-    "defaultMessage": "French",
+    "defaultMessage": "Französisch",
     "description": "French language title"
   },
+  "XAavlC": {
+    "defaultMessage": "Quellenwahl:"
+  },
   "ZzRWmv": {
-    "defaultMessage": "Select a language",
+    "defaultMessage": "Wähle eine Sprache",
     "description": "Select language helper tooltip"
   },
+  "g5qKeG": {
+    "defaultMessage": "Ungültiger erster Eintrag. Daten dürfen nicht mit dem Typ \"geschlossen\" beginnen. ({weekday})"
+  },
+  "lwgvqO": {
+    "defaultMessage": "Der letzte Eintrag vor einem geschlossenen Tag darf nicht vom Typ \"offen\" sein!. ({weekday})"
+  },
   "pf9Aoj": {
-    "defaultMessage": "Closed",
+    "defaultMessage": "Abgeschlossen",
     "description": "Closed label"
+  },
+  "wL6vMM": {
+    "defaultMessage": "Zwei folgende Datensätze des gleichen Typs \"{type}\" gefunden! \"({weekday})\""
+  },
+  "xZjm5n": {
+    "defaultMessage": "Öffnungszeiten:"
   }
 }

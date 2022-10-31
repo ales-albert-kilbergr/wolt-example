@@ -23,6 +23,7 @@ const FileOptionBox = styled(Box)`
 export interface IFileOptionProps {
   filePath: string;
   onSelect: (filePath: string) => Promise<void>;
+  isInvalid?: boolean;
 }
 
 export type FileOptionComponent = React.FC<IFileOptionProps>;
@@ -34,7 +35,9 @@ export const FileOption: FileOptionComponent = (props) => {
   return (
     <FileOptionBox onClick={handleSelect}>
       <DescriptionSharpIcon color="disabled" />
-      <Typography>{props.filePath}</Typography>
+      <Typography color={props.isInvalid ? 'error' : 'primary'}>
+        {props.filePath}
+      </Typography>
     </FileOptionBox>
   );
 };

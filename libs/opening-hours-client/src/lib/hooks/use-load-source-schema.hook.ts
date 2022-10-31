@@ -1,25 +1,5 @@
 import * as React from 'react';
-
-export interface IOpeningHoursWeekdayEntrySchema {
-  type: 'open' | 'close';
-  value: number;
-}
-
-export type IOpeningHoursWeekdaySchema = IOpeningHoursWeekdayEntrySchema[];
-
-export type IWeekday =
-  | 'monday'
-  | 'tuesday'
-  | 'wednesday'
-  | 'thursday'
-  | 'friday'
-  | 'saturday'
-  | 'sunday';
-
-export type IOpeningHoursInputSchema = Record<
-  IWeekday,
-  IOpeningHoursWeekdaySchema
->;
+import { IOpeningHoursInputSchema } from '../types';
 
 export interface ILoadOpeningHoursSourceSchemaProps {
   schemaUrl: string;
@@ -84,17 +64,6 @@ export type ILoadOpeningHoursSourceSchemaHook = (
   props: ILoadOpeningHoursSourceSchemaProps
 ) => ILoadOpeningHoursSourceSchema;
 
-export function isWeekday(value: unknown): value is IWeekday {
-  return [
-    'monday',
-    'tuesday',
-    'wednesday',
-    'thursday',
-    'friday',
-    'saturday',
-    'sunday',
-  ].includes(value as any);
-}
 export const useLoadOpeningHoursSourceSchema: ILoadOpeningHoursSourceSchemaHook =
   (props) => {
     const [state, dispatch] =

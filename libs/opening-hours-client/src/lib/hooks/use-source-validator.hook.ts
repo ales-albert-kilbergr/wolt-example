@@ -1,8 +1,8 @@
 import Ajv, { ErrorObject, ValidateFunction } from 'ajv';
 import * as React from 'react';
+import { IOpeningHoursInputSchema } from '../types';
 import {
   ILoadOpeningHoursSourceSchema,
-  IOpeningHoursInputSchema,
   useLoadOpeningHoursSourceSchema,
 } from './use-load-source-schema.hook';
 

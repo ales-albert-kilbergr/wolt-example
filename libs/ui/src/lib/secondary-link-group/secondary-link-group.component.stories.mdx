@@ -1,0 +1,33 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { WoltUiProvider } from '../ui.provider';
+import Box from '@mui/material/Box';
+import { SecondaryLink } from '../secondary-link/secondary-link.component';
+import { SecondaryLinkGroup } from './secondary-link-group.component';
+import { IntlProvider } from 'react-intl';
+
+<Meta title="ui/SecondaryLinkGroup" component={SecondaryLinkGroup} />
+
+# Secondary link group
+
+Secondary link group
+
+<Canvas>
+  <Story name="Base">
+    <WoltUiProvider>
+      <SecondaryLinkGroup>
+        <SecondaryLink>Some link</SecondaryLink>
+        <SecondaryLink>Some link</SecondaryLink>
+        <SecondaryLink active={true}>Some link</SecondaryLink>
+      </SecondaryLinkGroup>
+    </WoltUiProvider>
+  </Story>
+  <Story name="Custom Separator">
+    <WoltUiProvider>
+      <SecondaryLinkGroup separator="->">
+        <SecondaryLink>Some link</SecondaryLink>
+        <SecondaryLink>Some link</SecondaryLink>
+        <SecondaryLink active={true}>Some link</SecondaryLink>
+      </SecondaryLinkGroup>
+    </WoltUiProvider>
+  </Story>
+</Canvas>

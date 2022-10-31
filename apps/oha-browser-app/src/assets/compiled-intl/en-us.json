@@ -1,4 +1,16 @@
 {
+  "5dOoLU": [
+    {
+      "type": 0,
+      "value": "Choose file:"
+    }
+  ],
+  "CvwdGR": [
+    {
+      "type": 0,
+      "value": "Unknown parse error!"
+    }
+  ],
   "Hr/4a1": [
     {
       "type": 0,
@@ -17,10 +29,30 @@
       "value": "English (US)"
     }
   ],
+  "SL5smp": [
+    {
+      "type": 0,
+      "value": "First entry after a closed day cannot by of type \"close\"!. ("
+    },
+    {
+      "type": 1,
+      "value": "weekday"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
   "WrSFZP": [
     {
       "type": 0,
       "value": "French"
+    }
+  ],
+  "XAavlC": [
+    {
+      "type": 0,
+      "value": "Source choice:"
     }
   ],
   "ZzRWmv": [
@@ -29,10 +61,66 @@
       "value": "Select a language"
     }
   ],
+  "g5qKeG": [
+    {
+      "type": 0,
+      "value": "Invalid first entry. Data cannot start with type \"closed\". ("
+    },
+    {
+      "type": 1,
+      "value": "weekday"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "lwgvqO": [
+    {
+      "type": 0,
+      "value": "Last entry before a closed day cannot by of type \"open\"!. ("
+    },
+    {
+      "type": 1,
+      "value": "weekday"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
   "pf9Aoj": [
     {
       "type": 0,
       "value": "Closed"
+    }
+  ],
+  "wL6vMM": [
+    {
+      "type": 0,
+      "value": "Two following records of the same type \""
+    },
+    {
+      "type": 1,
+      "value": "type"
+    },
+    {
+      "type": 0,
+      "value": "\" found! \"("
+    },
+    {
+      "type": 1,
+      "value": "weekday"
+    },
+    {
+      "type": 0,
+      "value": ")\""
+    }
+  ],
+  "xZjm5n": [
+    {
+      "type": 0,
+      "value": "Opening hours:"
     }
   ]
 }

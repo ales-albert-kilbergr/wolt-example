@@ -5,3 +5,6 @@ export * from './card-item/card-item.component';
 export * from './weekday-info/weekday-info.component';
 export * from './themes';
 export * from './file-choice/file-option.component';
+export * from './secondary-link/secondary-link.component';
+export * from './secondary-link-group/secondary-link-group.component';
+export * from './ui.messages';

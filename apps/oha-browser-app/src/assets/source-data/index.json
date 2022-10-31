@@ -1,7 +1,8 @@
 {
   "files": [
     "test-one.data.json",
-    "test-two.data.json"
+    "test-two.data.json",
+    "invalid.data.json"
   ],
   "path": "assets/source-data"
 }

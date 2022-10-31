@@ -119,7 +119,6 @@ export const useReactIntlControllerProvider: IReactIntlControllerHook = (
   // Exposes a callback to handle mouse event meant to change current locale.
   const handleSetLocaleClick = React.useCallback(
     async (event: React.MouseEvent<HTMLElement>) => {
-      console.log('>>>>> CLICK', event);
       const locale = getLocaleFromClickEvent(event);
       await setLocale(locale);
     },

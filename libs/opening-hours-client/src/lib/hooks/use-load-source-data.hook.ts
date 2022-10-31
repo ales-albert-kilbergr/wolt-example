@@ -1,8 +1,5 @@
 import * as React from 'react';
-import {
-  IOpeningHoursData,
-  IOpeningHoursSourceParser,
-} from './use-source-parser.hook';
+import { IOpeningHoursSourceParser } from './use-source-parser.hook';
 import { IOpeningHoursSourceValidator } from './use-source-validator.hook';
 
 export interface ILoadOpeningHoursDataProps {
@@ -12,13 +9,13 @@ export interface ILoadOpeningHoursDataProps {
 }
 
 export interface ILoadOpeningHoursDataState {
-  data?: IOpeningHoursData[] | null;
+  fileName?: string;
   error?: unknown | null;
 }
 
 interface IOpeningHoursDataDataAction {
   type: 'data';
-  data: IOpeningHoursData[] | null;
+  fileName?: string;
 }
 
 type IOpeningHoursDataReducer = React.Reducer<
@@ -32,14 +29,16 @@ const opeingHoursDataReducer: IOpeningHoursDataReducer = (
 ) => {
   switch (action.type) {
     case 'data':
-      return { ...prevState, data: action.data };
+      return { ...prevState, fileName: action.fileName };
     default:
       return prevState;
   }
 };
 
-export interface ILoadOpeningHoursData {
+export interface ILoadOpeningHoursData extends ILoadOpeningHoursDataState {
   load: (filePath: string) => Promise<void>;
+  parser: IOpeningHoursSourceParser;
+  data: IOpeningHoursSourceParser['data'];
 }
 
 export type ILoadOpeningHoursSourceDataHook = (
@@ -68,10 +67,7 @@ export const useLoadOpeningHoursSourceData: ILoadOpeningHoursSourceDataHook = ({
 
       if (validator.validate(data)) {
         parser.parse(data);
-        /*
-        console.log(parsedData);
-        dispatch({ type: 'data', data: parsedData });
-        */
+        dispatch({ type: 'data', fileName: filePath });
       }
     },
     [rootUrl, validator, parser]
@@ -80,7 +76,10 @@ export const useLoadOpeningHoursSourceData: ILoadOpeningHoursSourceDataHook = ({
   return React.useMemo(
     () => ({
       load,
+      parser,
+      data: parser.data,
+      ...state,
     }),
-    [load]
+    [load, state, parser]
   );
 };
