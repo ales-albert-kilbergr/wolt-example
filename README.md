@@ -27,6 +27,11 @@ This example application still has some space for improvements and code optimiza
 (Test coverage, better hooks api, library for fetch requests, more generalization and reuse of ui components).
 
 <img src="/docs/img/screenshot-2022-10-31-174233.png" />
+<img src="/docs/img/screenshot-2022-10-31-174250.png" />
+<img src="/docs/img/screenshot-2022-10-31-174606.png" />
+<img src="/docs/img/screenshot-2022-10-31-174625.png" />
+<img src="/docs/img/screenshot-2022-10-31-174641.png" />
+<img src="/docs/img/screenshot-2022-10-31-174659.png" />
 
 ## Get started
 
