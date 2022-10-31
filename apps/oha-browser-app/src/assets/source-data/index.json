@@ -1,8 +1,11 @@
 {
   "files": [
-    "test-one.data.json",
-    "test-two.data.json",
-    "invalid.data.json"
+    "one.data.json",
+    "two.data.json",
+    "complicated.data.json",
+    "invalid.data.json",
+    "invalid-two.data.json",
+    "invalid-three.data.json"
   ],
   "path": "assets/source-data"
 }
