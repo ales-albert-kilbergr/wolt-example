@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { ResolvedIntlConfig } from 'react-intl';
+import { ResolvedIntlConfig, useIntl } from 'react-intl';
 import {
   IReactIntlLocaleCacheOption,
   ReactIntlLocaleStorage,
 } from './react-intl.cache';
+import { ReactIntlControllerContext } from './react-intl.context';
 import { IReactIntlController } from './react-intl.controller';
 import { ReactIntlProviderError } from './react-intl.error';
 import { getLocaleFromClickEvent } from './react-intl.helpers';
@@ -118,6 +119,7 @@ export const useReactIntlControllerProvider: IReactIntlControllerHook = (
   // Exposes a callback to handle mouse event meant to change current locale.
   const handleSetLocaleClick = React.useCallback(
     async (event: React.MouseEvent<HTMLElement>) => {
+      console.log('>>>>> CLICK', event);
       const locale = getLocaleFromClickEvent(event);
       await setLocale(locale);
     },
@@ -144,3 +146,7 @@ export const useReactIntlControllerProvider: IReactIntlControllerHook = (
     ]
   );
 };
+
+export function useReactIntlController() {
+  return React.useContext(ReactIntlControllerContext);
+}

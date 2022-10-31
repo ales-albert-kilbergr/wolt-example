@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@wolt/opening-hours-client": ["libs/opening-hours-client/src/index.ts"],
       "@wolt/react-intl": ["libs/react-intl/src/index.ts"],
       "@wolt/ui": ["libs/ui/src/index.ts"]
     }

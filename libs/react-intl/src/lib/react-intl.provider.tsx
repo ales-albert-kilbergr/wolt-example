@@ -29,11 +29,11 @@ export const ReactIntlControllerProvider: ReactIntlControllerProviderComponent =
     if (!controller.intlMessages) {
       return null;
     }
-
+    console.log(controller);
     return (
       <IntlProvider
         messages={controller.intlMessages}
-        locale={controller.defaultLocale}
+        locale={controller.currentLocale || controller.defaultLocale}
       >
         <ReactIntlControllerContext.Provider value={controller}>
           {props.children}

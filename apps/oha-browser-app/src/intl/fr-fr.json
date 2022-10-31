@@ -1,0 +1,26 @@
+{
+  "Hr/4a1": {
+    "defaultMessage": "Today",
+    "description": "Today label"
+  },
+  "IgvG/M": {
+    "defaultMessage": "German",
+    "description": "German language title"
+  },
+  "KHJCun": {
+    "defaultMessage": "English (US)",
+    "description": "English language title"
+  },
+  "WrSFZP": {
+    "defaultMessage": "French",
+    "description": "French language title"
+  },
+  "ZzRWmv": {
+    "defaultMessage": "Select a language",
+    "description": "Select language helper tooltip"
+  },
+  "pf9Aoj": {
+    "defaultMessage": "Closed",
+    "description": "Closed label"
+  }
+}
