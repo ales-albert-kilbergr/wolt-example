@@ -22,7 +22,7 @@ export const ClosedLabel: ClosedLabelComponent = (props) => {
         flex: '1',
         textAlign: props.textAlign,
         fontSize: '16px',
-        color: '#A1A2A3',
+        color: 'woltGrey.600',
         lineHeight: '38px',
       }}
     >

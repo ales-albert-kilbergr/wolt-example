@@ -1,6 +1,38 @@
 import { createTheme } from '@mui/material/styles';
+import { ColorPartial } from '@mui/material/styles/createPalette';
+
+declare module '@mui/material/styles' {
+  interface Palette {
+    woltBlack: Palette['primary'];
+    woltWhite: Palette['primary'];
+    woltGreen: Palette['primary'];
+    woltGrey: ColorPartial;
+  }
+  interface PaletteOptions {
+    woltBlack: PaletteOptions['primary'];
+    woltWhite: PaletteOptions['primary'];
+    woltGreen: PaletteOptions['primary'];
+    woltGrey: PaletteOptions['primary'];
+  }
+}
 
 export const lightTheme = createTheme({
+  palette: {
+    woltBlack: {
+      main: '#202125',
+    },
+    woltWhite: {
+      main: '#FFFFFF',
+    },
+    woltGreen: {
+      main: '#5BCB02',
+    },
+    woltGrey: {
+      '200': '#F8F8F8',
+      '400': '#EEEEEE',
+      '600': '#A1A2A4',
+    },
+  },
   typography: {
     fontFamily: 'Roboto',
     allVariants: {
@@ -15,11 +47,12 @@ export const lightTheme = createTheme({
       fontWeight: '600',
     },
   },
+
   components: {
     MuiCssBaseline: {
       styleOverrides: (theme) => ({
         body: {
-          background: '#f8f8f8',
+          background: theme.palette.woltGrey['200'],
         },
       }),
     },

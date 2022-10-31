@@ -11,12 +11,12 @@ const FileOptionBox = styled(Box)`
   height: 38px;
   align-items: center;
   padding: 0 12px;
-  transition: background 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
   &:hover {
-    background: #eeeeee;
+    background-color: ${({ theme }) => theme.palette.woltGrey[400]};
   }
   &:active {
-    background: #a1a2a3;
+    background-color: ${({ theme }) => theme.palette.woltGrey[600]};
   }
 `;
 

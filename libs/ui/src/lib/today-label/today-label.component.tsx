@@ -16,7 +16,7 @@ export const TodayLabel: TodayLabelComponent = () => {
         textTransform: 'uppercase',
         fontWeight: '600',
         fontSize: '14px',
-        color: '#5BCB02',
+        color: 'woltGreen.main',
         paddingLeft: '12px',
         lineHeight: '38px',
       }}

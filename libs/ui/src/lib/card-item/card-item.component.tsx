@@ -7,7 +7,7 @@ export const CardItem: CardItemComponent = (props) => {
   return (
     <CardContent
       sx={{
-        borderBottom: '2px solid #eeeeee',
+        borderBottom: (theme) => `2px solid ${theme.palette.woltGrey[400]}`,
       }}
     >
       {props.children}

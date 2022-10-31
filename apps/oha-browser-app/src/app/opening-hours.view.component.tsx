@@ -130,7 +130,7 @@ export const OpeningHoursMainView: OpeningHoursMainViewComponent = (props) => {
           justifyContent: 'space-between',
           width: '350px',
           padding: '6px 24px',
-          color: '#A1A2A4',
+          color: 'woltGrey.600 ',
         }}
       >
         <SecondaryLinkGroup>

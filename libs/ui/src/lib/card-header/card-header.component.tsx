@@ -11,7 +11,7 @@ export const CardHeader: CardHeaderComponent = (props) => {
     <CardContent
       sx={{
         display: 'flex',
-        borderBottom: '2px solid #A1A2A4',
+        borderBottom: (theme) => `2px solid ${theme.palette.woltGrey['600']}`,
         columnGap: '12px',
         alignItems: 'center',
         lineHeight: '48px',

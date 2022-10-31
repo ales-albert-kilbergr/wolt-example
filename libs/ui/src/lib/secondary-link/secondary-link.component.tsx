@@ -22,12 +22,13 @@ export const SecondaryLink: SecondaryLinkComponent = ({
       {...props}
       sx={{
         display: 'inline-block',
-        color: '#A1A2A4',
+        color: 'woltGrey.600',
         cursor: disabled ? 'initial' : 'pointer',
-        borderBottom: `2px solid ${active ? '#A1A2A4' : 'transparent'}`,
+        borderBottom: `2px solid`,
+        borderColor: active ? 'woltGrey.600' : 'transparent',
         transition: 'border-color 0.25s ease-in-out',
         '&:hover': {
-          borderColor: disabled ? 'transparent' : '#A1A2A4',
+          borderColor: disabled ? 'transparent' : 'woltGrey.600',
         },
         ...sx,
       }}
