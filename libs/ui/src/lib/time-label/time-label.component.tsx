@@ -17,7 +17,12 @@ export const TimeLabel: TimeLabelComponent = (props) => {
     <FormattedTimeParts value={timeDate}>
       {(parts) => (
         <span>
-          {parts[0].value} {parts[4].value}
+          {parts[0].value}
+          {/*
+           * PM|AM only exists if locale is en-US, in other european locales
+           * this time part does not exists as the 0-24 format is used.
+           */}
+          {parts[4]?.value ? ` ${parts[4].value}` : ':00'}
         </span>
       )}
     </FormattedTimeParts>
